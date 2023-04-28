@@ -141,7 +141,7 @@ a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--navy-blue-modal);
+    color: var(--navy-blue);
     padding: 24px 0;
     transition: color var(--anim);
 }
@@ -332,6 +332,44 @@ a {
 }
 
 .modal-icon:active {}
+
+.modal-head {
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 4px;
+    widows: 360px;
+}
+
+.modal-form-list {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-form-name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: var(--light-slate);
+
+}
+
+/**
+  |============================
+  | Benefits
+  |============================
+*/
 
 .benefits-main {
     padding: 120px 0;
@@ -675,7 +713,7 @@ a {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    /* text-align: center; */
+    text-align: center;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
     margin-bottom: 8px;
@@ -685,7 +723,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    /* text-align: center; */
+    text-align: center;
     letter-spacing: 0.02em;
     color: var(--slate)
 }
@@ -699,9 +737,12 @@ a {
 .footer-conteiner {
     display: flex;
     align-items: baseline;
-    gap: 120px;
+
 }
 
+.footer-left {
+    margin-right: 120px;
+}
 
 .footer-text {
     font-weight: 400;
@@ -716,6 +757,10 @@ a {
     display: inline-block;
     margin-bottom: 16px;
 
+}
+
+.footer-middle {
+    margin-right: 80px;
 }
 
 .footer-social {
@@ -738,4 +783,81 @@ a {
 .footer-icon .social-item .social-link:hover,
 .footer-icon .social-item .social-link:focus {
     background-color: var(--green);
+}
+
+.footer-right {}
+
+.footer-subscribe {
+    display: block;
+}
+
+.footer-right-head {
+    margin-bottom: 16px;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--white);
+}
+
+.footer-label-sub {
+    display: flex;
+    align-items: center;
+}
+
+.footer-label {
+    display: inline-block;
+    margin-right: 23px;
+}
+
+::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    color: var(--white);
+}
+
+.footer-email {
+    padding: 8px 0 8px 16px;
+    width: 264px;
+    height: 40px;
+    border: 1px solid var(--white);
+    background-color: var(--navy-blue);
+    color: var(--white);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 165px;
+    height: 40px;
+    background-color: var(--iris);
+    border-radius: 4px;
+    padding: 8px 24px;
+
+
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+.footer-sub-btn-text {}
+
+.sub-btn {
+    fill: var(--white);
+    background-size: contain;
+
 }
