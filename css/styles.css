@@ -340,7 +340,6 @@ a {
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--navy-blue);
-
 }
 
 .modal-form {}
@@ -355,7 +354,6 @@ a {
     text-align: left;
     color: var(--light-slate);
 }
-
 
 .modal-form-list {
     position: relative;
@@ -426,13 +424,13 @@ a {
 .modal-policy-form {
     display: flex;
     align-items: center;
-    gap: 8px;
+    /* gap: 8px; */
     margin-bottom: 24px;
 }
 
 .modal-policy-form-check {
     display: inline-block;
-    margin-right: 0;
+    margin-right: 8px;
 }
 
 .modal-policy-form-box {
