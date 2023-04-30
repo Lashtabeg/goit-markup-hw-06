@@ -8,7 +8,7 @@
     --light-slate: #8e8f99;
     --cornflower: #e7e9fc;
     --cloud: #f4f4fd;
-    --navy-blue-modal: #2e2f42;
+    --navy-blue-modal: rgba(46, 47, 66, 0.4);
     --grey: #2e2f42;
     --white: #ffffff;
     --dairy: #fcfcfc;
@@ -327,43 +327,160 @@ a {
 
 }
 
-.modal-icon {
+.modal-icon-close {
     display: inline-block;
 }
 
-.modal-icon:active {}
-
 .modal-head {
-
-    font-family: Roboto;
+    display: block;
+    margin-bottom: 16px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 16px;
+    color: var(--navy-blue);
+
 }
+
+.modal-form {}
 
 .modal-label {
     display: block;
     margin-bottom: 4px;
-    widows: 360px;
-}
-
-.modal-form-list {
-    margin: 0;
-    padding: 0;
-}
-
-.modal-form-name {
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.17px;
     letter-spacing: 0.04em;
     text-align: left;
     color: var(--light-slate);
+}
+
+
+.modal-form-list {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 46px 0 46px;
+    border: 1px solid var(--navy-blue);
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color var(--anim);
+    color: var(--navy-blue);
+}
+
+.modal-form-input:focus {
+    outline-color: var(--iris);
+}
+
+.modal-form-input:focus+.modal-icon {
+    fill: var(--iris);
+}
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill var(--anim);
+    pointer-events: none;
+}
+
+
+.modal-form-comment {}
+
+.modal-text-area {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    max-height: 180px;
+    resize: none;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--navy-blue);
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color var(--anim);
+    color: var(--navy-blue);
+}
+
+.modal-text-area::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: var(--navy-blue-modal);
+}
+
+.modal-text-area:focus {
+    outline-color: var(--iris);
+}
+
+.modal-policy-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.modal-policy-form-check {
+    display: inline-block;
+    margin-right: 0;
+}
+
+.modal-policy-form-box {
+    appearance: none;
+    cursor: pointer;
 
 }
+
+.modal-policy-form-unchecked {
+    opacity: 1;
+    transition: var(--anim);
+}
+
+.modal-policy-form-box:checked+.modal-policy-form-check>.modal-policy-form-unchecked {
+    opacity: 0;
+}
+
+.modal-policy-form-checked {
+    opacity: 0;
+    transition: var(--anim);
+}
+
+.modal-policy-form-box:checked+.modal-policy-form-check>.modal-policy-form-checked {
+    opacity: 1;
+}
+
+
+.policy-text {
+    color: var(--light-slate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.policy-link {
+    color: var(--iris);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    text-decoration: solid;
+
+}
+
+
+
 
 /**
   |============================
@@ -458,7 +575,7 @@ a {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: var(--navy-blue-modal);
+    color: var(--navy-blue);
     margin-bottom: 72px;
 }
 
@@ -810,7 +927,7 @@ a {
 
 .footer-label {
     display: inline-block;
-    margin-right: 23px;
+    margin-right: 24px;
 }
 
 ::placeholder {
@@ -823,7 +940,7 @@ a {
 }
 
 .footer-email {
-    padding: 8px 0 8px 16px;
+    padding-left: 16px;
     width: 264px;
     height: 40px;
     border: 1px solid var(--white);
@@ -841,20 +958,23 @@ a {
     width: 165px;
     height: 40px;
     background-color: var(--iris);
+    border: none;
     border-radius: 4px;
     padding: 8px 24px;
 
-
-
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white);
+
+    transition: background-color var(--anim);
 }
 
-.footer-sub-btn-text {}
+.footer-button:focus,
+.footer-button:hover {
+    background-color: var(--ocean);
+}
 
 .sub-btn {
     fill: var(--white);
